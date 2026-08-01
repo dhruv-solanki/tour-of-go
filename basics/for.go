@@ -1,4 +1,4 @@
-package main
+package basics
 
 // The basic for loop has three components separated by semicolons:
 
@@ -6,7 +6,19 @@ package main
 // the condition expression: evaluated before every iteration
 // the post statement: executed at the end of every iteration
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+
+// Excercise:
+func Sqrt(x float64) float64 {
+	z := 1.0
+	for i := 0; i < 10; i++ {
+		z -= (z*z - x) / (2 * z)
+	}
+	return z
+}
 
 func main() {
 	sum := 0
@@ -25,4 +37,6 @@ func main() {
 	}
 
 	fmt.Println("Sum", sum)
+
+	fmt.Println(math.Sqrt(2), Sqrt(2))
 }

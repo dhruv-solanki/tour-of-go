@@ -1,7 +1,7 @@
+package basics
+
 // Every Go program is made up of packages.
 // Programs start running in package main.
-
-package main
 
 import (
 	"fmt"
